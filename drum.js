@@ -33,8 +33,8 @@ function playSound(button) {
       break;
 // This will play the default sound when the incorrect keys are clicked
     default:
-      let crash8 = new Audio("./sounds/crash8.mp3")
-      crash8.play();
+      // let crash8 = new Audio("./sounds/crash8.mp3")
+      // crash8.play();
       break;
   }
 }
