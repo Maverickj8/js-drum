@@ -1,5 +1,6 @@
+// create a variable that will access the drum buttons
 const drumDiv = document.querySelector(".drum-button");
-
+// This fumction with play the audio when each button is clicked
 function playSound(button) {
   switch (button) {
     case "q":
@@ -30,13 +31,14 @@ function playSound(button) {
       let crash7 = new Audio("./sounds/crash7.mp3");
       crash7.play();
       break;
-
+// This will play the default sound when the incorrect keys are clicked
     default:
       let crash8 = new Audio("./sounds/crash8.mp3")
       crash8.play();
       break;
   }
 }
+// This will add an event listener to the buttons so as to fire the sound when clicked
 drumDiv.addEventListener("click", (event) => playSound(event.target.id));
-
+// This will add an event listener to the keyboard, so that when the corresponding key is pressed, the sound will play
 document.addEventListener("keypress", (event) => playSound(event.key));
